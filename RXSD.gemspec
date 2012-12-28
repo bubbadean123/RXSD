@@ -1,6 +1,7 @@
 GEM_NAME="rxsd"
-PKG_VERSION='0.5.2'
-PKG_FILES = FileList['lib/**/*.rb', 'COPYING', 'LICENSE', 'Rakefile', 'README.rdoc', 'spec/**/*.rb' ]
+PKG_VERSION='0.6.0'
+PKG_FILES = ['COPYING', 'LICENSE', 'Rakefile', 'README.rdoc']
+PKG_FILES += Dir.glob('lib/**/*.rb')
 
 Gem::Specification.new do |s|
   s.name = GEM_NAME
@@ -17,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.author = "Mo Morsi"
   s.email = "mo@morsi.org"
-  s.date = Date.today.to_s
+  s.date = Time.now.to_s
   s.description = %q{A library to translate xsd schemas and xml implementations into ruby classes/objects}
   s.summary = %q{A library to translate xsd schemas and xml implementations into ruby classes/objects}
   s.homepage = %q{http://morsi.org/projects/RXSD}
